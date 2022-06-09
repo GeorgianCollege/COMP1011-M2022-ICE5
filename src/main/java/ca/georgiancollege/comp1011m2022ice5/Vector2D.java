@@ -11,7 +11,6 @@ public class Vector2D
     private float m_y;
 
     // Constructors
-
     /**
      * Default constructor
      * - set x and y components to 0.0f and id to -1
@@ -79,6 +78,12 @@ public class Vector2D
     public void setX(float new_x)
     {
         m_x = new_x;
+    }
+
+    // Computed read-only Property
+    public float getMagnitude()
+    {
+        return Utility.Instance().Distance(new Vector2D(0.0f, 0.0f), this);
     }
 
     // Public Methods
