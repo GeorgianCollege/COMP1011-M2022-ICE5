@@ -1,5 +1,6 @@
 package ca.georgiancollege.comp1011m2022ice5;
 
+import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;

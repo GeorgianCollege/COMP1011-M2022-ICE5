@@ -11,7 +11,7 @@ import java.io.IOException;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("vector2d-tableview.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("calculate-vector2d-distance.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setTitle("Calculate Vector2D Distance");
         Image icon = new Image(getClass().getResourceAsStream("icon.png"));
