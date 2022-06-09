@@ -47,11 +47,11 @@ public class CalculateVector2DDistanceController implements Initializable
 
             Vector2D point1 = new Vector2D(x1, y1);
             startingMagnitudeLabel.setText(String.valueOf(point1.getMagnitude()));
-            //DBManager.Instance().insertVector2D(point1);
+            DBManager.Instance().insertVector2D(point1);
 
             Vector2D point2 = new Vector2D(x2, y2);
             endingMagnitudeLabel.setText(String.valueOf(point2.getMagnitude()));
-            //DBManager.Instance().insertVector2D(point2);
+            DBManager.Instance().insertVector2D(point2);
 
             float distance = Utility.Instance().Distance(point1, point2);
             ResultTextField.setText(String.valueOf(distance));
@@ -68,6 +68,8 @@ public class CalculateVector2DDistanceController implements Initializable
         Y1Spinner.getValueFactory().setValue(0.0);
         X2Spinner.getValueFactory().setValue(0.0);
         Y2Spinner.getValueFactory().setValue(0.0);
+        startingMagnitudeLabel.setText("");
+        endingMagnitudeLabel.setText("");
         ResultTextField.clear();
 
         X1Spinner.requestFocus();

@@ -43,7 +43,7 @@ public class DBManager
         ResultSet resultSet = null;
 
         // create a query string
-        String sql = "INSERT INTO vectors(X, Y) VALUES(?, ?);";
+        String sql = "INSERT INTO vectors(X, Y, Magnitude) VALUES(?, ?, ?);";
 
         try
         (   /* head of the try / catch block */
@@ -54,6 +54,7 @@ public class DBManager
             // configure prepared statement
             statement.setFloat(1, vector2D.getX());
             statement.setFloat(2, vector2D.getY());
+            statement.setFloat(3, vector2D.getMagnitude());
 
             // run the command on the Database
             statement.executeUpdate();
