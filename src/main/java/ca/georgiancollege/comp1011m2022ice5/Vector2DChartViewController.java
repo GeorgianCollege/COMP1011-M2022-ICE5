@@ -8,6 +8,7 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 
+import java.io.IOException;
 import java.net.URL;
 import java.security.SecureRandom;
 import java.util.ResourceBundle;
@@ -25,9 +26,9 @@ public class Vector2DChartViewController implements Initializable
     private NumberAxis numberAxis;
 
     @FXML
-    private void LoadTableView(ActionEvent event)
+    private void LoadTableView(ActionEvent event) throws IOException
     {
-
+        SceneManager.Instance().changeScene(event, "vector2d-tableview.fxml");
     }
 
     /**

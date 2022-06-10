@@ -9,6 +9,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -30,9 +31,9 @@ public class Vector2DTableViewController implements Initializable
     private TableColumn<Vector2D, Float> MagnitudeColumn;
 
     @FXML
-    private void LoadChartView(ActionEvent event)
+    private void LoadChartView(ActionEvent event) throws IOException
     {
-
+        SceneManager.Instance().changeScene(event, "vector2d-chartview.fxml");
     }
 
     @Override
