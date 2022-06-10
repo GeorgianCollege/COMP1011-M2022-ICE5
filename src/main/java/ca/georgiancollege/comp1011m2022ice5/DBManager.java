@@ -132,9 +132,18 @@ public class DBManager
     {
         // Step 1. Create a Series
         XYChart.Series<String, Float> magnitudes = new XYChart.Series<>();
+        magnitudes.setName("2022");
 
         // Step 2. Get the Data from the Database
         ArrayList<Vector2D> vectors = readVectorTable();
+
+        // mock data example
+        /*
+        magnitudes.getData().add(new XYChart.Data<>("0, 0", 0.0f));
+        magnitudes.getData().add(new XYChart.Data<>("10, 20", 10.0f));
+        magnitudes.getData().add(new XYChart.Data<>("30, 40", 20.0f));
+        magnitudes.getData().add(new XYChart.Data<>("50, 80", 30.0f));
+         */
 
         // Step 3. For Each Vector in the Data...Loop and add it to the Series
         for (var vector : vectors)
