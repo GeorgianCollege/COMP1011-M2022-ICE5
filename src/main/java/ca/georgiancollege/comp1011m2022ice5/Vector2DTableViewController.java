@@ -2,6 +2,7 @@ package ca.georgiancollege.comp1011m2022ice5;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
@@ -27,6 +28,12 @@ public class Vector2DTableViewController implements Initializable
 
     @FXML
     private TableColumn<Vector2D, Float> MagnitudeColumn;
+
+    @FXML
+    private void LoadChartView(ActionEvent event)
+    {
+
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)

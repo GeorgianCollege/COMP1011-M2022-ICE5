@@ -148,7 +148,7 @@ public class DBManager
         // Step 3. For Each Vector in the Data...Loop and add it to the Series
         for (var vector : vectors)
         {
-            var chartData = new XYChart.Data<>(vector.toString(), vector.getMagnitude());
+            var chartData = new XYChart.Data<>(vector.toOneDecimalString(), vector.getMagnitude());
             magnitudes.getData().add(chartData);
         }
 
