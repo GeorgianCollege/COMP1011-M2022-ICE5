@@ -1,5 +1,7 @@
 package ca.georgiancollege.comp1011m2022ice5;
 
+import javafx.scene.chart.XYChart;
+
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -122,4 +124,25 @@ public class DBManager
         return vectors;
     }
 
+    /**
+     * This method returns the Bar Chart Data from the Database
+     * @return
+     */
+    public XYChart.Series<String, Float> getMagnitude()
+    {
+        // Step 1. Create a Series
+        XYChart.Series<String, Float> magnitudes = new XYChart.Series<>();
+
+        // Step 2. Get the Data from the Database
+        ArrayList<Vector2D> vectors = readVectorTable();
+
+        // Step 3. For Each Vector in the Data...Loop and add it to the Series
+        for (var vector : vectors)
+        {
+            var chartData = new XYChart.Data<>(vector.toString(), vector.getMagnitude());
+            magnitudes.getData().add(chartData);
+        }
+
+        return magnitudes;
+    }
 }
