@@ -112,6 +112,13 @@ public class Vector2D
         return this;
     }
 
+    public String toOneDecimalString()
+    {
+        var x = String.format("%.1f", getX());
+        var y = String.format("%.1f", getY());
+        return ("(" + x + ", " + y + ")");
+    }
+
     // Overridden Methods
     @Override
     public String toString()
